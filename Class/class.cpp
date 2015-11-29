@@ -18,6 +18,9 @@ void Class::ReadFile()
     in_stream.close();
     for(unsigned int i = 0;i < Persons.size();i++){
         cout << Persons[i].Name;
+        cout << Persons[i].Byear;
+        cout << Persons[i].Sex;
+        cout << Persons[i].Dyear << endl;
     }
 
 }
@@ -26,6 +29,6 @@ istream &operator >>(istream &is, Class &pers){
     getline(is,pers.Name,',');
     getline(is,pers.Byear,',');
     getline(is,pers.Sex,',');
-    getline(is,pers.Dyear,',');
+    getline(is,pers.Dyear);
     return is;
 }

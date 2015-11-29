@@ -14,8 +14,8 @@ public:
     void ReadFile();
 friend istream &operator >>(istream &is, Class &pers);
 private:
-    int Byear;
-    int Dyear;
+    string Byear;
+    string Dyear;
     string Name;
     string Sex;
     vector<Class> Persons;
