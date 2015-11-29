@@ -29,8 +29,27 @@ void Class::DisplayList()
 
 istream &operator >>(istream &is, Class &pers){
     getline(is,pers.Name,',');
-    getline(is,pers.Byear,',');
     getline(is,pers.Sex,',');
+    getline(is,pers.Byear,',');
     getline(is,pers.Dyear);
     return is;
+}
+void Class::InputToFile()
+{
+  ofstream a_file;
+  a_file.open("Person.txt", ios::app);
+  cout << "Name: ";
+  getline(cin, Name);
+  a_file << endl << Name << ", ";
+  cout << "Sex: ";
+  cin >> Sex;
+  a_file << Sex << ", ";
+  cout << "Birth year: ";
+  cin >> Byear;
+  a_file << Byear << ", ";
+  cout << "Year of death: ";
+  cin >> Dyear;
+  a_file << Dyear;
+
+  a_file.close();
 }

@@ -1,4 +1,4 @@
-Charles Babbage, 1791, Male, 1871
-Ada Lovelace, 1815, Famale, 1852
-Alan Turing, 1912, Male, 1954
-Grace Murray Hopper, 1906, Male, 1992
+Charles Babbage, Male, 1791, 1871
+Ada Lovelace, Female, 1815, 1852
+Alan Turing, Male, 1912, 1954
+Grace Murray Hopper, Male, 1906, 1992

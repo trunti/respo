@@ -13,6 +13,7 @@ public:
     Class();
     void ReadFile();
     void DisplayList();
+    void InputToFile();
 friend istream &operator >>(istream &is, Class &pers);
 private:
     string Byear;

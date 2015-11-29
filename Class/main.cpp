@@ -1,4 +1,5 @@
 #include "class.h"
+#include "class2.h"
 #include <iostream>
 
 using namespace std;
@@ -6,11 +7,9 @@ using namespace std;
 
 int main()
 {
-    int number;
     Class klass;
+    klass.InputToFile();
     klass.ReadFile();
     klass.DisplayList();
-    cin >> number;
-    cout << number;
     return 0;
 }
