@@ -1,9 +1,9 @@
-#include <QCoreApplication>
+#include "class.h"
 
-int main(int argc, char *argv[])
+
+int main()
 {
-    QCoreApplication a(argc, argv);
-
-    return a.exec();
+    Class klass;
+    klass.ReadFile();
+    return 0;
 }
-
