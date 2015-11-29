@@ -14,9 +14,12 @@ void Class::ReadFile()
     }
     string next;
     while(in_stream >> next){
-        vect.push_back(next);
+        if(next == ".")
+        {
+             vect.push_back(next);
+        }
     }
     in_stream.close();
     for(unsigned int i = 0;i < vect.size();i++)
-    cout << vect[i] << " ";
+    cout << vect[0] << " ";
 }
