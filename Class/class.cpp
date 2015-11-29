@@ -16,13 +16,15 @@ void Class::ReadFile()
         Persons.push_back(pers);
     }
     in_stream.close();
+}
+void Class::DisplayList()
+{
     for(unsigned int i = 0;i < Persons.size();i++){
         cout << Persons[i].Name;
         cout << Persons[i].Byear;
         cout << Persons[i].Sex;
         cout << Persons[i].Dyear << endl;
     }
-
 }
 
 istream &operator >>(istream &is, Class &pers){
