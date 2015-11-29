@@ -17,5 +17,6 @@ void Class::ReadFile()
         vect.push_back(next);
     }
     in_stream.close();
-    cout << vect[1];
+    for(unsigned int i = 0;i < vect.size();i++)
+    cout << vect[i] << " ";
 }
