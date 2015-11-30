@@ -70,3 +70,7 @@ void Class::Search(string str){
         }
     }
 }
+void Class::SortByName()
+{
+    sort(Persons.begin(), Persons.end());
+}

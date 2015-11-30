@@ -16,6 +16,8 @@ public:
     void DisplayList();
     void InputToFile();
     void Search(string str);
+    void SortByName();
+friend bool operator <(const Class &a, const Class &b){return a.Name < b.Name;}
 friend istream &operator >>(istream &is, Class &pers);
 private:
     string Byear;

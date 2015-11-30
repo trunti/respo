@@ -6,10 +6,10 @@ Class2::Class2()
 }
 void Class2::howToSort()
 {
-    cout << "------Short------" << endl;
-    cout << "1 to short by name\n";
-    cout << "2 to short by age\n";
-    cout << "3 to short by sex\n";
+    cout << "------Sort------" << endl;
+    cout << "1 to sort by name\n";
+    cout << "2 to sort by age\n";
+    cout << "3 to sort by sex\n";
     cout << "-------------------\n";
     cin >> choices;
 }

@@ -47,6 +47,7 @@ void Redirect(const int number, Class &klass)
             klass.ReadFile();
         break;
         case 2:
+            klass.SortByName();
             klass.DisplayList();
         break;
         case 3:
