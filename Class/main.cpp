@@ -24,12 +24,12 @@ void FirstScreen()
     cout << "----------------------------------------------------------------------------" << endl;
     cout << "Welcome to computer scientists database." << endl;
     cout << "Here we have a list of important persons in the history of computer science." << endl;
-    cout << "Please choose what you want to do in the database." << endl;
 }
 int Choice()
 {
     int choice;
     cout << "----------------------------------------------------------------------------" << endl;
+    cout << "Please choose what you want to do in the database." << endl;
     cout << "1. Input a person to the list of computer scientists." << endl;
     cout << "2. Display the list in the database." << endl;
     cout << "3. Search in the database." << endl;
