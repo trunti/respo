@@ -1,5 +1,11 @@
 #ifndef CLASS2_H
 #define CLASS2_H
+#include <iostream>
+#include <vector>
+#include <string>
+#include <fstream>
+
+using namespace std;
 
 
 class Class2
