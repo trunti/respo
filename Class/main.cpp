@@ -17,7 +17,6 @@ int main()
     FirstScreen();
     Class klass;
     klass.ReadFile();
-    klass.SortByName();
     do {
     int choice = Choice();
     Redirect(choice, klass, Sorting);
@@ -37,9 +36,9 @@ int Choice()
     cout << "----------------------------------------------------------------------------" << endl;
     cout << "Please choose what you want to do in the database." << endl;
     cout << "1. Input a person to the list of computer scientists." << endl;
-    cout << "2. Display the list in the database." << endl;
+    cout << "2. Display the list in the database in its current order." << endl;
     cout << "3. Search in the database." << endl;
-    cout << "4. Sort the list in some way and display it." << endl;
+    cout << "4. Sort the list and display it." << endl;
     cout << "Your choice: ";
     cin >> choice;
     return choice;
@@ -54,7 +53,6 @@ void Redirect(const int number, Class &klass, int Sorting)
             klass.ReadFile();
         break;
         case 2:
-            klass.SortByName();
             klass.DisplayList();
         break;
         case 3:
@@ -87,11 +85,11 @@ bool True(const char Cont)
 }
 int WhatSort(int &Sorting)
 {
-    cout << "------Sort------" << endl;
-    cout << "1 to sort by name\n";
-    cout << "2 to sort by age\n";
-    cout << "3 to sort by sex\n";
-    cout << "-------------------\n";
+    cout << "--Desired way of sorting--" << endl;
+    cout << "1. Sort by first names\n";
+    cout << "2. Sort by year of birth\n";
+    cout << "3. Sort by gender\n";
+    cout << "--------------------------\n";
     cin >> Sorting;
     return Sorting;
 }
