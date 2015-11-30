@@ -15,7 +15,7 @@ public:
     void ReadFile();
     void DisplayList();
     void InputToFile();
-    void Search();
+    void Search(string str);
 friend istream &operator >>(istream &is, Class &pers);
 private:
     string Byear;
