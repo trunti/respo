@@ -56,7 +56,16 @@ void Class::InputToFile()
 void Class::Search(string str){
     for(unsigned int i = 0; i < Persons.size(); i++){
         if(Persons[i].Name.find(str) != string::npos){
-            cout << Persons[i].Name;
+            cout << Persons[i].Name << Persons[i].Sex << Persons[i].Byear << Persons[i].Dyear << endl;
+        }
+        if(Persons[i].Sex.find(str) != string::npos){
+            cout << Persons[i].Name << Persons[i].Sex << Persons[i].Byear << Persons[i].Dyear << endl;
+        }
+        if(Persons[i].Byear.find(str) != string::npos){
+            cout << Persons[i].Name << Persons[i].Sex << Persons[i].Byear << Persons[i].Dyear << endl;
+        }
+        if(Persons[i].Dyear.find(str) != string::npos){
+            cout << Persons[i].Name << Persons[i].Sex << Persons[i].Byear << Persons[i].Dyear << endl;
         }
     }
 }
