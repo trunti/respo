@@ -48,8 +48,7 @@ void Redirect(const int number, Class &klass)
             klass.Search(str);
         break;
         default:
-            cout << "Invalid choice, choose again!" << endl;
-            Choice();
+            cout << "Invalid choice, the program does nothing!" << endl;
     }
 }
 char Continue()
