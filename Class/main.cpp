@@ -102,8 +102,7 @@ void howToSort(const int Sorting, Class &klass)
         klass.SortByName();
         break;
     case 2:
-        //SortByAge();
-        cout << "worked 2";
+        klass.SortByYear();
         break;
     case 3:
         //SortBySex();

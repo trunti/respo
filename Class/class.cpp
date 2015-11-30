@@ -80,3 +80,13 @@ void Class::SortByName()
         cout << Persons[i].Dyear << endl;
     }
 }
+void Class::SortByYear()
+{
+    sort(Byear.begin(), Byear.end());
+    for(unsigned int i = 0;i < Persons.size();i++){
+        cout << Persons[i].Name;
+        cout << Persons[i].Byear;
+        cout << Persons[i].Sex;
+        cout << Persons[i].Dyear << endl;
+    }
+}
