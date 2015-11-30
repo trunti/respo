@@ -39,6 +39,7 @@ void Class::InputToFile()
   ofstream a_file;
   a_file.open("Person.txt", ios::app);
   cout << "Name: ";
+  cin.ignore();
   getline(cin, Name);
   a_file << endl << Name << ", ";
   cout << "Sex: ";

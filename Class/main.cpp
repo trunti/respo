@@ -2,14 +2,19 @@
 #include "search.h"
 
 int Choice();
-void Redirect(int number, Class &klass);
+void Redirect(const int number, Class &klass);
+char Continue();
+bool True(const char Cont);
 int main()
 {
+    char Cont;
     Class klass;
     klass.ReadFile();
+    do {
     int choice = Choice();
     Redirect(choice, klass);
-
+    Cont = Continue();
+    }while(True(Cont));
     return 0;
 }
 int Choice()
@@ -25,7 +30,7 @@ int Choice()
     cin >> choice;
     return choice;
 }
-void Redirect(int number, Class &klass)
+void Redirect(const int number, Class &klass)
 {
     string str;
     switch(number)
@@ -46,4 +51,20 @@ void Redirect(int number, Class &klass)
             cout << "Invalid choice, choose again!" << endl;
             Choice();
     }
+}
+char Continue()
+{
+    char Cont;
+    cout << "Do you want to continue in the database?" << endl;
+    cout << "Press Y to continue ";
+    cin >> Cont;
+    return Cont;
+}
+bool True(const char Cont)
+{
+    if(Cont == 'y' || Cont == 'Y')
+    {
+        return true;
+    }
+    return false;
 }
