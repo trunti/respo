@@ -18,7 +18,6 @@ void Class2::Sort()
     switch(choices){
     case 1:
         //SortByName();
-        cout << "worked";
         break;
     case 2:
         //SortByAge();
@@ -27,9 +26,20 @@ void Class2::Sort()
     case 3:
         //SortBySex();
         cout << "worked 3";
+        break;
     default:
         cout << "Choose again!" << endl;
-        howToSort();
             break;
     }
 }
+/*void Class2::SortByName()
+{
+    sort(Persons.begin(), Persons.end());
+    for(unsigned int i = 0;i < Persons.size();i++){
+        cout << Persons[i].Name;
+        cout << Persons[i].Byear;
+        cout << Persons[i].Sex;
+        cout << Persons[i].Dyear << endl;
+    }
+}
+*/

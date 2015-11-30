@@ -73,4 +73,10 @@ void Class::Search(string str){
 void Class::SortByName()
 {
     sort(Persons.begin(), Persons.end());
+    for(unsigned int i = 0;i < Persons.size();i++){
+        cout << Persons[i].Name;
+        cout << Persons[i].Byear;
+        cout << Persons[i].Sex;
+        cout << Persons[i].Dyear << endl;
+    }
 }
