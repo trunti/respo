@@ -6,8 +6,10 @@ void Redirect(int number, Class &klass);
 int main()
 {
     Class klass;
-    int choice = Choice();
-    Redirect(choice, klass);
+    klass.ReadFile();
+    klass.Search();
+    //int choice = Choice();
+    //Redirect(choice, klass);
 
     return 0;
 }

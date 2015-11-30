@@ -53,3 +53,11 @@ void Class::InputToFile()
 
   a_file.close();
 }
+void Class::Search(){
+    string str("Hopper");
+    for(unsigned int i = 0; i < Persons.size(); i++){
+        if(Persons[i].Name.find(str) != string::npos){
+            cout << Persons[i].Name;
+        }
+    }
+}

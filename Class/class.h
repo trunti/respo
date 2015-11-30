@@ -4,6 +4,7 @@
 #include <vector>
 #include <string>
 #include <fstream>
+#include <algorithm>
 
 using namespace std;
 
@@ -14,6 +15,7 @@ public:
     void ReadFile();
     void DisplayList();
     void InputToFile();
+    void Search();
 friend istream &operator >>(istream &is, Class &pers);
 private:
     string Byear;
