@@ -20,13 +20,13 @@ void Class::ReadFile()
 void Class::DisplayList()
 {
     for(unsigned int i = 0;i < Persons.size();i++){
-        cout << "----------------------------------------------------------" << endl;
+        cout << "-----------------------------------------------------" << endl;
         cout << Persons[i].Name;
         cout << Persons[i].Byear;
         cout << Persons[i].Sex;
         cout << Persons[i].Dyear << endl;
     }
-    cout << "----------------------------------------------------------" << endl;
+    cout << "-----------------------------------------------------" << endl;
 }
 
 istream &operator >>(istream &is, Class &pers){

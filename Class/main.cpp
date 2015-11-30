@@ -1,6 +1,7 @@
 #include "class.h"
 #include "search.h"
 
+void FirstScreen();
 int Choice();
 void Redirect(const int number, Class &klass);
 char Continue();
@@ -8,6 +9,7 @@ bool True(const char Cont);
 int main()
 {
     char Cont;
+    FirstScreen();
     Class klass;
     klass.ReadFile();
     do {
@@ -17,12 +19,17 @@ int main()
     }while(True(Cont));
     return 0;
 }
-int Choice()
+void FirstScreen()
 {
-    int choice;
+    cout << "----------------------------------------------------------------------------" << endl;
     cout << "Welcome to computer scientists database." << endl;
     cout << "Here we have a list of important persons in the history of computer science." << endl;
     cout << "Please choose what you want to do in the database." << endl;
+}
+int Choice()
+{
+    int choice;
+    cout << "----------------------------------------------------------------------------" << endl;
     cout << "1. Input a person to the list of computer scientists." << endl;
     cout << "2. Display the list in the database." << endl;
     cout << "3. Search in the database." << endl;
