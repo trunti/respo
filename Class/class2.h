@@ -6,7 +6,6 @@ class Class2
 {
 public:
     Class2();
-    Class2();
     int choices;
     void Sort();
     void howToSort();
