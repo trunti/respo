@@ -56,7 +56,7 @@ void Redirect(const int number, Class &klass, int Sorting)
             klass.DisplayList();
         break;
         case 3:
-            cout << "What would you like to search for? " << endl;
+            cout << "What would you like to search for? ";
             cin >> str;
             klass.Search(str);
         break;
@@ -87,9 +87,9 @@ bool True(const char Cont)
 int WhatSort(int &Sorting)
 {
     cout << "--Desired way of sorting--" << endl;
-    cout << "1. Sort by first names\n";
-    cout << "2. Sort by year of birth\n";
-    cout << "3. Sort by gender\n";
+    cout << "1. Sort by first names" << endl;
+    cout << "2. Sort by year of birth" << endl;
+    cout << "3. Sort by year of death" << endl;
     cout << "--------------------------\n";
     cin >> Sorting;
     return Sorting;
