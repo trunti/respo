@@ -30,9 +30,9 @@ void Service::DisplayList()
 {
     cout << "----------------------------------------" << endl;
     for(unsigned int i = 0;i < Persons.size();i++){
-        cout << Persons[i].Name;
-        cout << Persons[i].Byear;
-        cout << Persons[i].Sex;
+        cout << Persons[i].Name << " ";
+        cout << Persons[i].Byear <<" ";
+        cout << Persons[i].Sex <<" ";
         cout << Persons[i].Dyear << endl;
         cout << "----------------------------------------" << endl;
     }
@@ -54,4 +54,32 @@ void Service::SortByName()
 {
     sort(Persons.begin(), Persons.end());
     DisplayList();
+}
+void Service::SortByYear()
+{
+   int j;
+
+   for (unsigned int i = 0; i < Persons.size(); i++){
+       j = i;
+       while (j > 0 && Persons[j].Byear < Persons[j-1].Byear)
+       {
+             swap(Persons[j],Persons[j-1]);
+             j--;
+       }
+   }
+   DisplayList();
+}
+void Service::SortByYearD()
+{
+   int j;
+   for (unsigned int i = 0; i < Persons.size(); i++){
+       j = i;
+
+       while (j > 0 && Persons[j].Dyear < Persons[j-1].Dyear)
+       {
+           swap(Persons[j],Persons[j-1]);
+           j--;
+       }
+   }
+   DisplayList();
 }

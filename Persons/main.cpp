@@ -18,6 +18,8 @@ int main()
     serv.DisplayList();
     serv.Search(str);
     serv.SortByName();
+    serv.SortByYear();
+    serv.SortByYearD();
 
     return 0;
 }

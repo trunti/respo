@@ -17,6 +17,8 @@ public:
    void DisplayList();
    void Search(string str);
    void SortByName();
+   void SortByYear();
+   void SortByYearD();
 private:
    string Byear;
    string Dyear;
