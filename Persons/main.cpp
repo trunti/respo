@@ -13,6 +13,7 @@ int main()
     data.copyVector(MainVector);
     serv.setServiceVector(MainVector);
     serv.MakeSplitVec();
+    serv.DisplayList();
 
     return 0;
 }

@@ -15,13 +15,14 @@ public:
    void tttest();
    void MakeSplitVec();
    string findsubstr(int &numb,int &start,const int i,vector<string> service);
+   void DisplayList();
 private:
    string Byear;
    string Dyear;
    string Name;
    string Sex;
    vector<string> service;
-   vector<Service> MainV;
+   vector<Service> Persons;
 };
 
 #endif // SERVICE_H
