@@ -24,6 +24,9 @@ int main()
     present.Redirect(choice,serv,str);
     if(choice == 1){
         data.writeFile(str);
+        data.copyVector(Transfer);
+        serv.setServiceVector(Transfer);
+        serv.MakeSplitVec();
     }
     }while(1<2);
     return 0;

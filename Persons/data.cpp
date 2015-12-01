@@ -26,6 +26,14 @@ void Data::writeFile(string str){
 }
 void Data::copyVector(vector<string> &vect){
     for(unsigned int i = 0; i < data.size(); i++){
-        vect.push_back(data[i]);
+        for(unsigned int n = 0;n < data.size();n++)
+        {
+            if(data[i] == data[n])
+            {
+                continue;
+            }
+            vect.push_back(data[i]);
+        }
+
     }
 }

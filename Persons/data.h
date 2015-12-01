@@ -7,8 +7,7 @@
 
 using namespace std;
 
-class Data
-{
+class Data{
 public:
     Data();
     void readFile();
