@@ -9,11 +9,10 @@ int main()
     Service serv;
     Data data;
     data.readFile();
-    data.test();
-    vector<string> blah;
-    data.copyVector(blah);
-    serv.setServiceVector(blah);
-    serv.tttest();
+    vector<string> MainVector;
+    data.copyVector(MainVector);
+    serv.setServiceVector(MainVector);
+    serv.MakeSplitVec();
 
     return 0;
 }
