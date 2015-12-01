@@ -7,6 +7,11 @@ Service::Service()
 void Service::setServiceVector(vector<string> Transfer){
     service = Transfer;
 }
+void Service::AddName(string str){
+    service.push_back(str);
+    Persons.clear();
+}
+
 void Service::MakeSplitVec(){
         int start = 0, numb;
         Service serv;
@@ -54,14 +59,8 @@ void Service::Search(string str){
         }
     }
 }
-/*void AddName(string str){
 
-}
-
-bool CheckName(string str){
-
-}
-
+/*
 void Service::SortByName()
 {
     sort(Persons.begin(), Persons.end());

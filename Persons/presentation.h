@@ -14,6 +14,7 @@ public:
     void Redirect(int number, Service serv, string &input);
     string GetInfo();
     int Choice();
+    bool Continue();
 };
 
 #endif // PRESENTATION_H

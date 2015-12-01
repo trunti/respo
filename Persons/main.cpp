@@ -24,11 +24,10 @@ int main()
     present.Redirect(choice,serv,str);
     if(choice == 1){
         data.writeFile(str);
-        data.copyVector(Transfer);
-        serv.setServiceVector(Transfer);
+        serv.AddName(str);
         serv.MakeSplitVec();
     }
-    }while(1<2);
+    }while(present.Continue());
     return 0;
 }
 

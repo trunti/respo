@@ -62,3 +62,14 @@ string Presentation::GetInfo(){
     cin >> dyear;
     return name + sex + byear + dyear;
 }
+
+bool Presentation::Continue(){
+    char cont;
+    cout << "Press y to Continue: ";
+    cin >> cont;
+    if(cont == 'y'){
+        return true;
+    }else{
+        return false;
+    }
+}
