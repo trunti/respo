@@ -20,9 +20,9 @@ int main()
 
     Presentation present;
     do{
-    int number = present.Choice();
-    present.Redirect(number,serv,str);
-    if(number == 1){
+    int choice = present.Choice();
+    present.Redirect(choice,serv,str);
+    if(choice == 1){
         data.writeFile(str);
     }
     }while(1<2);

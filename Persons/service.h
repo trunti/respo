@@ -19,6 +19,8 @@ public:
    void SortByName();
    void SortByYear();
    void SortByYearD();
+   void AddName(string str);
+   bool CheckName(string str);
 private:
    string Byear;
    string Dyear;

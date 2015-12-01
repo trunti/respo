@@ -54,6 +54,14 @@ void Service::Search(string str){
         }
     }
 }
+void AddName(string str){
+
+}
+
+bool CheckName(string str){
+
+}
+
 void Service::SortByName()
 {
     sort(Persons.begin(), Persons.end());

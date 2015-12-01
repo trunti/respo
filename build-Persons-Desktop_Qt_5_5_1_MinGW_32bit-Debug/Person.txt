@@ -3,3 +3,5 @@ Ada Lovelace, Female, 1815, 1852
 Alan Turing, Male, 1912, 1954
 Grace Murray Hopper, Male, 1906, 1992
 Blaise Pascal, Male, 1623, 1662
+
+Svanur, Male, 1999, 2000
