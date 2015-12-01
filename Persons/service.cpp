@@ -50,3 +50,8 @@ void Service::Search(string str){
         }
     }
 }
+void Service::SortByName()
+{
+    sort(Persons.begin(), Persons.end());
+    DisplayList();
+}

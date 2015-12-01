@@ -16,6 +16,7 @@ public:
    string findsubstr(int &numb,int &start,const int i,vector<string> service);
    void DisplayList();
    void Search(string str);
+   void SortByName();
 private:
    string Byear;
    string Dyear;
@@ -23,6 +24,8 @@ private:
    string Sex;
    vector<string> service;
    vector<Service> Persons;
+
+friend bool operator <(const Service &a, const Service &b){return a.Name < b.Name;}
 };
 
 #endif // SERVICE_H

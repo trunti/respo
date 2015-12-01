@@ -17,6 +17,7 @@ int main()
     serv.MakeSplitVec();
     serv.DisplayList();
     serv.Search(str);
+    serv.SortByName();
 
     return 0;
 }
