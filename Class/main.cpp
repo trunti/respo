@@ -59,6 +59,7 @@ void Redirect(const int number, Class &klass, int Sorting)
             cout << "What would you like to search for? " << endl;
             cin >> str;
             klass.Search(str);
+        break;
         case 4:
             WhatSort(Sorting);
             howToSort(Sorting, klass);
