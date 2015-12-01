@@ -11,10 +11,8 @@ class Service : Data
 {
 public:
    Service();
-   void SortByName();
-   void SortByYear();
-   void SortByYearD();
-   void Search(string str);
+   void setServiceVector();
+   void tttest();
 private:
    string Byear;
    string Dyear;

@@ -30,6 +30,8 @@ void Data::writeFile(string str){
 void Data::test(){
     cout << data[1];
 }
-void Data::copyVector(vector<string> vect){
-    vect = data;
+void Data::copyVector(vector<string> &vect){
+    for(unsigned int i = 0; i < data.size(); i++){
+        vect.push_back(data[i]);
+    }
 }
