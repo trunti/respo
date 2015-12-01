@@ -19,8 +19,13 @@ int main()
     serv.MakeSplitVec();
 
     Presentation present;
-    present.Main();
-
+    do{
+    int number = present.Choice();
+    present.Redirect(number,serv,str);
+    if(number == 1){
+        data.writeFile(str);
+    }
+    }while(1<2);
     return 0;
 }
 

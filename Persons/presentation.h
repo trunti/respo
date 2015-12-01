@@ -11,7 +11,8 @@ class Presentation : Service
 public:
     Presentation();
     void Main();
-    void Redirect(int number);
+    void Redirect(int number, Service serv, string &input);
+    string GetInfo();
     int Choice();
 };
 

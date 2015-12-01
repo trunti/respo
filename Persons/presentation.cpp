@@ -8,10 +8,7 @@ Presentation::Presentation()
 }
 void Presentation::Main()
 {
-    int blah;
 
-    blah = Choice();
-    Redirect(blah);
 }
 int Presentation::Choice()
 {
@@ -25,24 +22,43 @@ int Presentation::Choice()
     cin >> choice;
     return choice;
 }
-void Presentation::Redirect(int number)
+void Presentation::Redirect(int number, Service serv,string &input)
 {
     string str;
+    Service ser;
     switch(number)
     {
         case 1:
+            cout << "Input info on computer nerd. ";
+            input = GetInfo();
 
         break;
         case 2:
-            DisplayList();
+            serv.DisplayList();
 
         break;
         case 3:
             cout << "What would you like to search for? ";
             cin >> str;
-            Search(str);
+            serv.Search(str);
         break;
         default:
             cout << "Invalid choice, the program does nothing!" << endl;
     }
+}
+string Presentation::GetInfo(){
+    string name,sex,byear,dyear;
+    cout << endl << "Input full name: ";
+    cin.ignore();
+    getline(cin, name);
+    name += ", ";
+    cout << "Sex: ";
+    cin >> sex;
+    sex += ", ";
+    cout << "Birth year: ";
+    cin >> byear;
+    byear += ", ";
+    cout << "Year of death if still kicking put Alive: ";
+    cin >> dyear;
+    return name + sex + byear + dyear;
 }
