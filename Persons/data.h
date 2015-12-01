@@ -11,9 +11,11 @@ class Data
 public:
     Data();
     void readFile();
-    void writeFile();
+    void writeFile(string str);
+    void test();
+    void copyVector(vector<string> vect);
 private:
-
+    vector<string> data;
 };
 
 #endif // DATA_H
