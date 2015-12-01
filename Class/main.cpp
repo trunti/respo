@@ -1,6 +1,5 @@
 #include "class.h"
 #include "class2.h"
-#include "search.h"
 
 void FirstScreen();
 int Choice();
@@ -17,7 +16,7 @@ int main()
     FirstScreen();
     Class klass;
     klass.ReadFile();
-    do {
+    do{
     int choice = Choice();
     Redirect(choice, klass, Sorting);
     Cont = Continue();

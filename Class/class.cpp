@@ -9,10 +9,12 @@ void Class::ReadFile()
     ifstream in_stream;
     Class pers;
     in_stream.open("Person.txt");
-    if (in_stream.fail()){
+    if (in_stream.fail())
+    {
         cout << "Input file opening failed.";
     }
-    while(in_stream >> pers){
+    while(in_stream >> pers)
+    {
         Persons.push_back(pers);
     }
     in_stream.close();
@@ -40,6 +42,7 @@ void Class::InputToFile()
 {
   ofstream a_file;
   a_file.open("Person.txt", ios::app);
+
   cout << "Name: ";
   cin.ignore();
   getline(cin, Name);
@@ -55,20 +58,25 @@ void Class::InputToFile()
   a_file << Dyear;
 
   a_file.close();
+
   cout << Name << " was added to the database!" << endl;
 }
 void Class::Search(string str){
     for(unsigned int i = 0; i < Persons.size(); i++){
-        if(Persons[i].Name.find(str) != string::npos){
+        if(Persons[i].Name.find(str) != string::npos)
+        {
             cout << Persons[i].Name << Persons[i].Sex << Persons[i].Byear << Persons[i].Dyear << endl;
         }
-        else if(Persons[i].Sex.find(str) != string::npos){
+        else if(Persons[i].Sex.find(str) != string::npos)
+        {
             cout << Persons[i].Name << Persons[i].Sex << Persons[i].Byear << Persons[i].Dyear << endl;
         }
-        else if(Persons[i].Byear.find(str) != string::npos){
+        else if(Persons[i].Byear.find(str) != string::npos)
+        {
             cout << Persons[i].Name << Persons[i].Sex << Persons[i].Byear << Persons[i].Dyear << endl;
         }
-        else if(Persons[i].Dyear.find(str) != string::npos){
+        else if(Persons[i].Dyear.find(str) != string::npos)
+        {
             cout << Persons[i].Name << Persons[i].Sex << Persons[i].Byear << Persons[i].Dyear << endl;
         }
     }
@@ -85,26 +93,26 @@ void Class::SortByYear()
     for (unsigned int i = 0; i < Persons.size(); i++){
         j = i;
 
-        while (j > 0 && Persons[j].Byear < Persons[j-1].Byear){
+        while (j > 0 && Persons[j].Byear < Persons[j-1].Byear)
+        {
               swap(Persons[j],Persons[j-1]);
               j--;
-              }
         }
+    }
     DisplayList();
 }
 void Class::SortByYearD()
 {
-    {
-        int j;
+    int j;
 
-        for (unsigned int i = 0; i < Persons.size(); i++){
-            j = i;
+    for (unsigned int i = 0; i < Persons.size(); i++){
+        j = i;
 
-            while (j > 0 && Persons[j].Dyear < Persons[j-1].Dyear){
-                  swap(Persons[j],Persons[j-1]);
-                  j--;
-                  }
-            }
-        DisplayList();
+        while (j > 0 && Persons[j].Dyear < Persons[j-1].Dyear)
+        {
+            swap(Persons[j],Persons[j-1]);
+            j--;
+        }
     }
+    DisplayList();
 }
