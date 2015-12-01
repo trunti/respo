@@ -30,7 +30,11 @@ void Presentation::Redirect(int number, Service serv,string &input)
     {
         case 1:
             cout << "Input info on computer nerd. ";
-            input = GetInfo();
+            input = GetInfo(str);
+            if(!serv.CheckName(str)){
+                input = "";
+                cout << "This person is already in our database!" << endl;
+            }
 
         break;
         case 2:
@@ -46,11 +50,12 @@ void Presentation::Redirect(int number, Service serv,string &input)
             cout << "Invalid choice, the program does nothing!" << endl;
     }
 }
-string Presentation::GetInfo(){
+string Presentation::GetInfo(string &str){
     string name,sex,byear,dyear;
     cout << endl << "Input full name: ";
     cin.ignore();
     getline(cin, name);
+    str = name;
     name += ", ";
     cout << "Sex: ";
     cin >> sex;

@@ -13,13 +13,14 @@ public:
    Service();
    void setServiceVector(vector<string> Transfer);
    void MakeSplitVec();
-   string findsubstr(int &numb,int &start,const int i,vector<string> service);
+   string findsubstr(int &numb, int &start, const int i);
    void DisplayList();
    void Search(string str);
    void SortByName();
    void SortByYear();
    void SortByYearD();
    void AddName(string str);
+   bool CheckName(string str);
 private:
    string Byear;
    string Dyear;

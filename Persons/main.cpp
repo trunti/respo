@@ -22,7 +22,7 @@ int main()
     do{
     int choice = present.Choice();
     present.Redirect(choice,serv,str);
-    if(choice == 1){
+    if(choice == 1 && str != ""){
         data.writeFile(str);
         serv.AddName(str);
         serv.MakeSplitVec();

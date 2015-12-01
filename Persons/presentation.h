@@ -12,7 +12,7 @@ public:
     Presentation();
     void Main();
     void Redirect(int number, Service serv, string &input);
-    string GetInfo();
+    string GetInfo(string &str);
     int Choice();
     bool Continue();
 };

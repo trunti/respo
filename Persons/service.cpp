@@ -18,19 +18,32 @@ void Service::MakeSplitVec(){
         for(unsigned int i = 0;i < service.size();i++)
         {
             start = 0;
-            serv.Name = findsubstr(numb,start,i,service);
-            serv.Sex = findsubstr(numb,start,i,service);
-            serv.Byear = findsubstr(numb,start,i,service);
-            serv.Dyear = findsubstr(numb,start,i,service);
+            serv.Name = findsubstr(numb,start,i);
+            serv.Sex = findsubstr(numb,start,i);
+            serv.Byear = findsubstr(numb,start,i);
+            serv.Dyear = findsubstr(numb,start,i);
             Persons.push_back(serv);
         }
 }
-string Service::findsubstr(int &numb,int &start,const int i,vector<string> service){
+string Service::findsubstr(int &numb,int &start,const int i){
    numb = service[i].find(',',start);
    string str = service[i].substr(start,numb-start);
    start = numb + 2;
    return str;
 }
+bool Service::CheckName(string str){
+    int start,numb;
+    string name;
+    for(unsigned int i = 0; i < service.size(); i++){
+        start = 0;
+        name = findsubstr(numb,start,i);
+        if(str == name){
+            return false;
+        }
+    }
+    return true;
+}
+
 void Service::DisplayList()
 {
     cout << "----------------------------------------" << endl;
