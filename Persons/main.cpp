@@ -1,25 +1,24 @@
 #include <iostream>
 #include "data.h"
 #include "service.h"
+#include "presentation.h"
 
 using namespace std;
 
 int main()
 {
-    Service serv;
-    Data data;
-    string str;
-    cin >> str;
-    data.readFile();
     vector<string> Transfer;
+
+    Data data;
+    data.readFile();
     data.copyVector(Transfer);
+
+    Service serv;
     serv.setServiceVector(Transfer);
     serv.MakeSplitVec();
-    serv.DisplayList();
-    serv.Search(str);
-    serv.SortByName();
-    serv.SortByYear();
-    serv.SortByYearD();
+
+    Presentation present;
+    present.Main();
 
     return 0;
 }

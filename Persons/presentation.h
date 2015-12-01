@@ -10,6 +10,8 @@ class Presentation : Service
 {
 public:
     Presentation();
+    void Main();
+    int Choice();
 };
 
 #endif // PRESENTATION_H
