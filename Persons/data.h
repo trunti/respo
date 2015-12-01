@@ -13,7 +13,6 @@ public:
     Data();
     void readFile();
     void writeFile(string str);
-    void test();
     void copyVector(vector<string> &vect);
 protected:
     vector<string> data;

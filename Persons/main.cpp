@@ -9,9 +9,9 @@ int main()
     Service serv;
     Data data;
     data.readFile();
-    vector<string> MainVector;
-    data.copyVector(MainVector);
-    serv.setServiceVector(MainVector);
+    vector<string> Transfer;
+    data.copyVector(Transfer);
+    serv.setServiceVector(Transfer);
     serv.MakeSplitVec();
     serv.DisplayList();
 

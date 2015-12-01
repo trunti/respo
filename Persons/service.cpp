@@ -4,11 +4,8 @@ Service::Service()
 {
 
 }
-void Service::setServiceVector(vector<string> blah){
-    service = blah;
-}
-void Service::tttest(){
-    cout << service[2];
+void Service::setServiceVector(vector<string> Transfer){
+    service = Transfer;
 }
 void Service::MakeSplitVec(){
         int start = 0, numb;

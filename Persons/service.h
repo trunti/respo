@@ -11,8 +11,7 @@ class Service : Data
 {
 public:
    Service();
-   void setServiceVector(vector<string> blah);
-   void tttest();
+   void setServiceVector(vector<string> Transfer);
    void MakeSplitVec();
    string findsubstr(int &numb,int &start,const int i,vector<string> service);
    void DisplayList();
