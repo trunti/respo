@@ -1,8 +1,12 @@
 #ifndef SERVICE_H
 #define SERVICE_H
+#include "data.h"
+#include <iostream>
+
+using namespace std;
 
 
-class Service
+class Service : Data
 {
 public:
     Service();

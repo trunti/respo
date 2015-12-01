@@ -1,8 +1,11 @@
 #ifndef PRESENTATION_H
 #define PRESENTATION_H
+#include "service.h"
+#include <iostream>
 
+using namespace std;
 
-class Presentation
+class Presentation : Service
 {
 public:
     Presentation();
