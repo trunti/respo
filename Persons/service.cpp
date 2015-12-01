@@ -73,13 +73,13 @@ void Service::Search(string str){
     }
 }
 
-/*
+
 void Service::SortByName()
 {
     sort(Persons.begin(), Persons.end());
     DisplayList();
 }
-void Service::SortByYear()
+/*void Service::SortByYear()
 {
    int j;
 

@@ -15,6 +15,7 @@ public:
     string GetInfo(string &str);
     int Choice();
     bool Continue();
+    char y;
 };
 
 #endif // PRESENTATION_H

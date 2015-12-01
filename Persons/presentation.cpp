@@ -38,7 +38,14 @@ void Presentation::Redirect(int number, Service serv,string &input)
 
         break;
         case 2:
-            serv.DisplayList();
+                cout << "Sort by name y or n: ";
+                cin >> y;
+                if(y == 'y' || y == 'Y'){
+                    serv.SortByName();
+                    serv.DisplayList();
+                }
+                else
+                    serv.DisplayList();
 
         break;
         case 3:
