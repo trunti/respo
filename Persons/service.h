@@ -15,6 +15,7 @@ public:
    void MakeSplitVec();
    string findsubstr(int &numb,int &start,const int i,vector<string> service);
    void DisplayList();
+   void Search(string str);
 private:
    string Byear;
    string Dyear;

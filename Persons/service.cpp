@@ -37,3 +37,16 @@ void Service::DisplayList()
         cout << "----------------------------------------" << endl;
     }
 }
+void Service::Search(string str){
+    if(str == ",")
+    {
+        cout << "Invalid choice!" << endl;
+        return;
+    }
+    for(unsigned int i = 0; i < service.size(); i++){
+        if(service[i].find(str) != string::npos)
+        {
+            cout << service[i] << endl;
+        }
+    }
+}

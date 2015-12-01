@@ -8,12 +8,15 @@ int main()
 {
     Service serv;
     Data data;
+    string str;
+    cin >> str;
     data.readFile();
     vector<string> Transfer;
     data.copyVector(Transfer);
     serv.setServiceVector(Transfer);
     serv.MakeSplitVec();
     serv.DisplayList();
+    serv.Search(str);
 
     return 0;
 }
