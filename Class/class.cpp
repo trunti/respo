@@ -73,12 +73,7 @@ void Class::Search(string str){
 void Class::SortByName()
 {
     sort(Persons.begin(), Persons.end());
-    for(unsigned int i = 0;i < Persons.size();i++){
-        cout << Persons[i].Name;
-        cout << Persons[i].Byear;
-        cout << Persons[i].Sex;
-        cout << Persons[i].Dyear << endl;
-    }
+    DisplayList();
 }
 void Class::SortByYear()
 {
@@ -93,4 +88,20 @@ void Class::SortByYear()
               }
         }
     DisplayList();
+}
+void Class::SortByYearD()
+{
+    {
+        int j;
+
+        for (unsigned int i = 0; i < Persons.size(); i++){
+            j = i;
+
+            while (j > 0 && Persons[j].Dyear < Persons[j-1].Dyear){
+                  swap(Persons[j],Persons[j-1]);
+                  j--;
+                  }
+            }
+        DisplayList();
+    }
 }

@@ -104,8 +104,7 @@ void howToSort(const int Sorting, Class &klass)
         klass.SortByYear();
         break;
     case 3:
-        //SortBySex();
-        cout << "worked 3";
+        klass.SortByYearD();
         break;
     default:
         cout << "Choose again!" << endl;
