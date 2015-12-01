@@ -4,9 +4,9 @@ Service::Service()
 {
 
 }
-void Service::setServiceVector(){
-    copyVector(service);
+void Service::setServiceVector(vector<string> blah){
+    service = blah;
 }
 void Service::tttest(){
-
+    cout << service[2];
 }

@@ -11,7 +11,7 @@ class Service : Data
 {
 public:
    Service();
-   void setServiceVector();
+   void setServiceVector(vector<string> blah);
    void tttest();
 private:
    string Byear;
