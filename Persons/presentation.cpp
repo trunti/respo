@@ -8,7 +8,10 @@ Presentation::Presentation()
 }
 void Presentation::Main()
 {
-    Choice();
+    int blah;
+
+    blah = Choice();
+    Redirect(blah);
 }
 int Presentation::Choice()
 {
@@ -22,21 +25,22 @@ int Presentation::Choice()
     cin >> choice;
     return choice;
 }
-void Redirect(const int number)
+void Presentation::Redirect(int number)
 {
     string str;
     switch(number)
     {
         case 1:
 
-
         break;
         case 2:
+            DisplayList();
 
         break;
         case 3:
             cout << "What would you like to search for? ";
             cin >> str;
+            Search(str);
         break;
         default:
             cout << "Invalid choice, the program does nothing!" << endl;

@@ -25,6 +25,7 @@ private:
    string Name;
    string Sex;
    vector<string> service;
+protected:
    vector<Service> Persons;
 
 friend bool operator <(const Service &a, const Service &b){return a.Name < b.Name;}

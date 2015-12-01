@@ -29,7 +29,7 @@ string Service::findsubstr(int &numb,int &start,const int i,vector<string> servi
 void Service::DisplayList()
 {
     cout << "----------------------------------------" << endl;
-    for(unsigned int i = 0;i < Persons.size();i++){
+    for(unsigned int i = 0; i < Persons.size();i++){
         cout << Persons[i].Name << " ";
         cout << Persons[i].Byear <<" ";
         cout << Persons[i].Sex <<" ";

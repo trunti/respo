@@ -8,6 +8,7 @@ using namespace std;
 int main()
 {
     vector<string> Transfer;
+    string str;
 
     Data data;
     data.readFile();
@@ -22,4 +23,5 @@ int main()
 
     return 0;
 }
+
 
