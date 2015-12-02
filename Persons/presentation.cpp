@@ -29,12 +29,13 @@ void Presentation::Redirect(int number, Service serv,string &input)
     switch(number)
     {
         case 1:
-            cout << "Input info on computer nerd. ";
+            cout << "Input info on computer nerd. " << endl;
             input = GetInfo(str);
             if(!serv.CheckName(str)){
                 input = "";
                 cout << "This person is already in our database!" << endl;
             }
+            cout << endl;
         break;
         case 2:
             choose = HowToSort();
