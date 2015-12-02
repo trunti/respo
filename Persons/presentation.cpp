@@ -6,10 +6,6 @@ Presentation::Presentation()
     cout << "Welcome to computer scientists database." << endl;
     cout << "Here we have a list of important persons in the history of computer science." << endl;
 }
-void Presentation::Main()
-{
-
-}
 int Presentation::Choice()
 {
     int choice;
@@ -71,7 +67,8 @@ string Presentation::GetInfo(string &str){
 
 bool Presentation::Continue(){
     char cont;
-    cout << "Press y to Continue: ";
+
+    cout << "To continue enter y: ";
     cin >> cont;
     if(cont == 'y'){
         return true;
@@ -82,10 +79,12 @@ bool Presentation::Continue(){
 int Presentation::HowToSort()
 {
     int Sorting;
+
     cout << "--Desired way of sorting--" << endl;
     cout << "1. Sort by first names" << endl;
     cout << "2. Sort by year of birth" << endl;
     cout << "3. Sort by year of death" << endl;
+    cout << "4. Sort by Sex" << endl;
     cout << "--------------------------\n";
     cout << "Enter your choice: ";
     cin >> Sorting;
@@ -106,7 +105,31 @@ void Presentation::Sorting(Service serv, const int choose)
     case 3:
         serv.SortByYearD();
     break;
+    case 4:
+        SortSex(serv);
+    break;
     default:
         cout << "That's not an option!" << endl;
     }
+}
+void Presentation::SortSex(Service serv){
+    int morf;
+    cout << "--Desired way of sorting--" << endl;
+    cout << "1. Females" << endl;
+    cout << "2. Males" << endl;
+    cout << "--------------------------\n";
+    cout << "Enter your choice: ";
+    cin >> morf;
+    switch(morf)
+    {
+    case 1:
+        serv.SortBySex("Female");
+    break;
+    case 2:
+        serv.SortBySex("Male");
+    break;
+    default:
+        cout << "That's not an option!" << endl;
+    }
+
 }

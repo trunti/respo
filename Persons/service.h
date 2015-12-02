@@ -19,6 +19,7 @@ public:
    void SortByName();
    void SortByYear();
    void SortByYearD();
+   void SortBySex(string str);
    void AddName(string str);
    bool CheckName(string str);
 private:

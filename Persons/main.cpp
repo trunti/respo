@@ -19,6 +19,7 @@ int main()
     serv.MakeSplitVec();
 
     Presentation present;
+
     do{
     int choice = present.Choice();
     present.Redirect(choice,serv,str);

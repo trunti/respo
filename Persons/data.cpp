@@ -7,6 +7,7 @@ Data::Data()
 void Data::readFile(){
     ifstream in_stream;
     in_stream.open("Person.txt");
+
     if (in_stream.fail())
     {
         cout << "Input file opening failed.";

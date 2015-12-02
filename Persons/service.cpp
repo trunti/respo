@@ -13,17 +13,18 @@ void Service::AddName(string str){
 }
 
 void Service::MakeSplitVec(){
-        int start = 0, numb;
-        Service serv;
-        for(unsigned int i = 0;i < service.size();i++)
-        {
-            start = 0;
-            serv.Name = findsubstr(numb,start,i);
-            serv.Sex = findsubstr(numb,start,i);
-            serv.Byear = findsubstr(numb,start,i);
-            serv.Dyear = findsubstr(numb,start,i);
-            Persons.push_back(serv);
-        }
+    int start = 0, numb;
+    Service serv;
+
+    for(unsigned int i = 0;i < service.size();i++)
+    {
+        start = 0;
+        serv.Name = findsubstr(numb,start,i);
+        serv.Sex = findsubstr(numb,start,i);
+        serv.Byear = findsubstr(numb,start,i);
+        serv.Dyear = findsubstr(numb,start,i);
+        Persons.push_back(serv);
+    }
 }
 string Service::findsubstr(int &numb,int &start,const int i){
    numb = service[i].find(',',start);
@@ -34,6 +35,7 @@ string Service::findsubstr(int &numb,int &start,const int i){
 bool Service::CheckName(string str){
     int start,numb;
     string name;
+
     for(unsigned int i = 0; i < service.size(); i++){
         start = 0;
         name = findsubstr(numb,start,i);
@@ -97,6 +99,7 @@ void Service::SortByYear()
 void Service::SortByYearD()
 {
    int j;
+
    for (unsigned int i = 0; i < Persons.size(); i++){
        j = i;
 
@@ -107,4 +110,16 @@ void Service::SortByYearD()
        }
    }
    DisplayList();
+}
+void Service::SortBySex(string str){
+    for(unsigned int i = 0; i < Persons.size(); i++){
+        if(Persons[i].Sex == str){
+            cout << "----------------------------------------" << endl;
+            cout << Persons[i].Name << " ";
+            cout << Persons[i].Sex <<" ";
+            cout << Persons[i].Byear <<" ";
+            cout << Persons[i].Dyear << endl;
+        }
+    }
+    cout << "----------------------------------------" << endl;
 }
