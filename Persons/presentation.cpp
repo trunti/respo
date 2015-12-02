@@ -26,6 +26,7 @@ void Presentation::Redirect(int number, Service serv,string &input)
 {
     string str;
     Service ser;
+    int choose;
     switch(number)
     {
         case 1:
@@ -35,18 +36,10 @@ void Presentation::Redirect(int number, Service serv,string &input)
                 input = "";
                 cout << "This person is already in our database!" << endl;
             }
-
         break;
         case 2:
-                cout << "Sort by name y or n: ";
-                cin >> y;
-                if(y == 'y' || y == 'Y'){
-                    serv.SortByName();
-                    serv.DisplayList();
-                }
-                else
-                    serv.DisplayList();
-
+            choose = HowToSort();
+            Sorting(serv, choose);
         break;
         case 3:
             cout << "What would you like to search for? ";
@@ -83,5 +76,34 @@ bool Presentation::Continue(){
         return true;
     }else{
         return false;
+    }
+}
+int Presentation::HowToSort()
+{
+    int Sorting;
+    cout << "--Desired way of sorting--" << endl;
+    cout << "1. Sort by first names" << endl;
+    cout << "2. Sort by year of birth" << endl;
+    cout << "3. Sort by year of death" << endl;
+    cout << "--------------------------\n";
+    cin >> Sorting;
+    return Sorting;
+}
+
+void Presentation::Sorting(Service serv, const int choose)
+{
+    switch(choose)
+    {
+    case 1:
+        serv.SortByName();
+    break;
+    case 2:
+        serv.SortByYear();
+    break;
+    case 3:
+        serv.SortByYearD();
+    break;
+    default:
+        cout << "That's not an option!" << endl;
     }
 }

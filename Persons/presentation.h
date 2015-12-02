@@ -15,6 +15,8 @@ public:
     string GetInfo(string &str);
     int Choice();
     bool Continue();
+    int HowToSort();
+    void Sorting(Service serv, const int choose);
     char y;
 };
 
