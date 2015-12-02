@@ -47,6 +47,7 @@ void Presentation::Redirect(int number, Service serv,string &input)
             serv.Search(str);
         break;
         case 4:
+            srand(time(0));
             j = serv.Getrandomscientist();
             i = rand() % j;
             serv.displayscientist(i);
@@ -69,7 +70,7 @@ string Presentation::GetInfo(string &str){
     cout << "Birth year: ";
     cin >> byear;
     byear += ", ";
-    cout << "Year of death if still kicking put Alive: ";
+    cout << "Year of death, if not dead put Alive: ";
     cin >> dyear;
     return name + sex + byear + dyear;
 }
