@@ -22,6 +22,8 @@ public:
    void SortBySex(string str);
    void AddName(string str);
    bool CheckName(string str);
+   void displayscientist(const int i);
+   int Getrandomscientist();
 private:
    string Byear;
    string Dyear;

@@ -14,6 +14,7 @@ int Presentation::Choice()
     cout << "1. Input a person to the list of computer scientists." << endl;
     cout << "2. Display the list in the database." << endl;
     cout << "3. Search in the database." << endl;
+    cout << "4. Get a random computer scientist." << endl;
     cout << "Your your choice: ";
     cin >> choice;
     cout << endl;
@@ -23,6 +24,7 @@ void Presentation::Redirect(int number, Service serv,string &input)
 {
     string str;
     Service ser;
+    int i,j;
     int choose;
     switch(number)
     {
@@ -41,7 +43,14 @@ void Presentation::Redirect(int number, Service serv,string &input)
         case 3:
             cout << "What would you like to search for? ";
             cin >> str;
+            cout << endl;
             serv.Search(str);
+        break;
+        case 4:
+            j = serv.Getrandomscientist();
+            i = rand() % j;
+            serv.displayscientist(i);
+            cout << endl;
         break;
         default:
             cout << "Invalid choice, the program does nothing!" << endl;
@@ -120,6 +129,7 @@ void Presentation::SortSex(Service serv){
     cout << "--------------------------\n";
     cout << "Enter your choice: ";
     cin >> morf;
+    cout << endl;
     switch(morf)
     {
     case 1:

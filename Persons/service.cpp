@@ -48,17 +48,14 @@ bool Service::CheckName(string str){
 
 void Service::DisplayList()
 {
-    cout << "----------------------------------------" << endl;
     for(unsigned int i = 0; i < Persons.size();i++){
-        cout << Persons[i].Name << " ";
-        cout << Persons[i].Sex <<" ";
-        cout << Persons[i].Byear <<" ";
-        cout << Persons[i].Dyear << endl;
-        cout << "----------------------------------------" << endl;
+        displayscientist(i);
     }
     cout << endl;
 }
 void Service::Search(string str){
+    bool found = false;
+
     if(str == ",")
     {
         cout << "Invalid choice!" << endl;
@@ -67,14 +64,13 @@ void Service::Search(string str){
     for(unsigned int i = 0; i < service.size(); i++){
         if(service[i].find(str) != string::npos)
         {
-            cout << "----------------------------------------" << endl;
-            cout << Persons[i].Name << " ";
-            cout << Persons[i].Sex <<" ";
-            cout << Persons[i].Byear <<" ";
-            cout << Persons[i].Dyear << endl;
+            displayscientist(i);
+            found = true;
         }
     }
-    cout << "----------------------------------------" << endl;
+    if(!found){
+        cout << "Nothing found!" << endl;
+    }
     cout << endl;
 }
 void Service::SortByName()
@@ -114,12 +110,31 @@ void Service::SortByYearD()
 void Service::SortBySex(string str){
     for(unsigned int i = 0; i < Persons.size(); i++){
         if(Persons[i].Sex == str){
-            cout << "----------------------------------------" << endl;
-            cout << Persons[i].Name << " ";
-            cout << Persons[i].Sex <<" ";
-            cout << Persons[i].Byear <<" ";
-            cout << Persons[i].Dyear << endl;
+            displayscientist(i);
         }
     }
-    cout << "----------------------------------------" << endl;
+    cout << endl;
+}
+void Service::displayscientist(const int i){
+
+    cout << "-------------------------------------------------------" << endl;
+    cout << "| " << Persons[i].Name << "\t\t";
+
+    if(Persons[i].Name.size() < 14){
+        cout << "\t";
+    }
+
+    cout << Persons[i].Sex << "\t";
+    cout << Persons[i].Byear << "\t";
+    cout << Persons[i].Dyear;
+
+    if(Persons[i].Dyear != "Alive"){
+        cout << " ";
+    }
+    cout << " |" << endl;
+
+    cout << "-------------------------------------------------------" << endl;
+}
+int Service::Getrandomscientist(){
+    return Persons.size();
 }
