@@ -18,8 +18,9 @@ int Presentation::Choice()
     cout << "1. Input a person to the list of computer scientists." << endl;
     cout << "2. Display the list in the database." << endl;
     cout << "3. Search in the database." << endl;
-    cout << "Your choice: ";
+    cout << "Your your choice: ";
     cin >> choice;
+    cout << endl;
     return choice;
 }
 void Presentation::Redirect(int number, Service serv,string &input)
@@ -86,7 +87,9 @@ int Presentation::HowToSort()
     cout << "2. Sort by year of birth" << endl;
     cout << "3. Sort by year of death" << endl;
     cout << "--------------------------\n";
+    cout << "Enter your choice: ";
     cin >> Sorting;
+    cout << endl;
     return Sorting;
 }
 

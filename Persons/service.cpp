@@ -49,11 +49,12 @@ void Service::DisplayList()
     cout << "----------------------------------------" << endl;
     for(unsigned int i = 0; i < Persons.size();i++){
         cout << Persons[i].Name << " ";
-        cout << Persons[i].Byear <<" ";
         cout << Persons[i].Sex <<" ";
+        cout << Persons[i].Byear <<" ";
         cout << Persons[i].Dyear << endl;
         cout << "----------------------------------------" << endl;
     }
+    cout << endl;
 }
 void Service::Search(string str){
     if(str == ",")
@@ -66,11 +67,13 @@ void Service::Search(string str){
         {
             cout << "----------------------------------------" << endl;
             cout << Persons[i].Name << " ";
-            cout << Persons[i].Byear <<" ";
             cout << Persons[i].Sex <<" ";
+            cout << Persons[i].Byear <<" ";
             cout << Persons[i].Dyear << endl;
         }
     }
+    cout << "----------------------------------------" << endl;
+    cout << endl;
 }
 void Service::SortByName()
 {

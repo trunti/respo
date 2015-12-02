@@ -8,3 +8,4 @@ Wesley Allison Clark, Male, 1927, Alive
 Donald Ervin Knuth, Male, 1938, Alive
 John von Neumann, Male, 1903, 1957
 Claude Shannon, Male, 1916, 2001
+William Henry Gates, Male, 1955, Alive
