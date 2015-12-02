@@ -10,3 +10,6 @@ John von Neumann, Male, 1903, 1957
 Claude Shannon, Male, 1916, 2001
 William Henry Gates, Male, 1955, Alive
 Linus Torvalds, Male, 1969, Alive
+Andrew Koenig, Male, 1952, Alive
+Herman Hollerith, Male, 1860, 1929
+Margaret Hamilton, Female, 1936, Alive
