@@ -3,3 +3,8 @@ Ada Lovelace, Female, 1815, 1852
 Alan Turing, Male, 1912, 1954
 Grace Murray Hopper, Male, 1906, 1992
 Blaise Pascal, Male, 1623, 1662
+John Warner Backus, Male, 1924, 2007
+Wesley Allison Clark, Male, 1927, Alive
+Donald Ervin Knuth, Male, 1938, Alive
+John von Neumann, Male, 1903, 1957
+Claude Shannon, Male, 1916, 2001
