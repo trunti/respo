@@ -64,8 +64,17 @@ int main()
         int born = query.value("Born").toUInt();
         int died = query.value("Died").toUInt();
 
-        cout << "Name: " << nafn << " " << "Gender: " << gender << " " << "Born: " << born
-             << " " << "Died: " << died  << " " << endl;
+        if (died == 0)
+        {
+
+            cout << "Name: " << nafn << endl << "Gender: " << gender << endl << "Born: " << born
+                 << endl << "Died: Alive!" << endl << endl;
+        }
+        else
+        {
+            cout << "Name: " << nafn << endl << "Gender: " << gender << endl << "Born: " << born
+            << endl << "Died: " << died  << " " << endl << endl;
+        }
     }
 
     cout << endl << "##### THE END #####" << endl;
