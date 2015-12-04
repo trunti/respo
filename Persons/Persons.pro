@@ -1,4 +1,4 @@
-QT += core sql
+QT += core sql widgets
 QT -= gui
 
 TEMPLATE = app
