@@ -60,11 +60,12 @@ int main()
         // qDebug() << query.lastQuery();
         // int id = query.value(0).toUInt();
         string nafn = query.value("Name").toString().toStdString();
-        int gender = query.value("Gender").toUInt();
+        string gender = query.value("Gender").toString().toStdString();
         int born = query.value("Born").toUInt();
         int died = query.value("Died").toUInt();
 
-        cout << nafn << " " << gender << " " << born << died  << " " << endl;
+        cout << "Name: " << nafn << " " << "Gender: " << gender << " " << "Born: " << born
+             << " " << "Died: " << died  << " " << endl;
     }
 
     cout << endl << "##### THE END #####" << endl;
