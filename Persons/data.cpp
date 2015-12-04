@@ -5,6 +5,61 @@ Data::Data()
 
 }
 void Data::readFile(){
+
+    QSqlDatabase db;
+    db = QSqlDatabase::addDatabase("QSQLITE");
+    QString dbName = "Persons_db.sqlite";
+    db.setDatabaseName(dbName);
+
+    db.open();
+
+    QSqlQuery query(db);
+
+    bool ok = db.open();
+
+    if(ok)
+    {
+      QSqlQuery query("dbName");
+      while (query.next())
+      {
+        QString country = query.value(0).toString();
+        qWarning() << country;
+      }
+    }
+    query.prepare("SELECT * FROM Persons_db");
+    query.bindValue("Name", QString::fromStdString("*"));
+    query.bindValue("Gender", QString::fromStdString("*"));
+    query.bindValue("Born", QString::fromStdString("*"));
+    query.bindValue("Died", QString::fromStdString("*"));
+    query.exec();
+
+    while(query.next())
+    {
+        // qDebug() << query.lastQuery();
+        // int id = query.value(0).toUInt();
+        string nafn = query.value("Name").toString().toStdString();
+        string gender = query.value("Gender").toString().toStdString();
+        int born = query.value("Born").toUInt();
+        int died = query.value("Died").toUInt();
+
+        if (died == 0)
+        {
+
+            cout << "Name: " << nafn << endl << "Gender: " << gender << endl << "Born: " << born
+                 << endl << "Died: Alive!" << endl << endl;
+        }
+        else
+        {
+            cout << "Name: " << nafn << endl << "Gender: " << gender << endl << "Born: " << born
+                 << endl << "Died: " << died  << " " << endl << endl;
+        }
+    }
+
+    cout << endl << "##### THE END #####" << endl;
+
+
+
+    /*
     ifstream in_stream;
     in_stream.open("Person.txt");
 
@@ -18,6 +73,7 @@ void Data::readFile(){
         data.push_back(getperson);
     }
     in_stream.close();
+    */
 }
 void Data::writeFile(string str){
     ofstream out_stream;

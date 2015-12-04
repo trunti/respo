@@ -4,6 +4,13 @@
 #include <vector>
 #include <fstream>
 #include <algorithm>
+#include <QtSql>
+#include <QDebug>
+#include <QSqlDatabase>
+#include <QSqlError>
+#include <QSqlQuery>
+#include <QFileInfo>
+#include <QString>
 
 using namespace std;
 
