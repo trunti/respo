@@ -1,4 +1,7 @@
 #include <iostream>
+
+#include <QFileInfo>
+#include <QtSql>
 #include "data.h"
 #include "service.h"
 #include "presentation.h"
@@ -7,7 +10,15 @@ using namespace std;
 
 int main()
 {
-    vector<string> Transfer;
+    QSqlDatabase db;
+    db = QSqlDatabase::addDatabase("QSQLITE");
+    QString dbName = "database.sqlite";
+    db.setDatabaseName(dbName);
+
+    db.open();
+
+    QSqlQuery query(db);
+/*
     string str;
 
     Data data;
@@ -28,7 +39,7 @@ int main()
         serv.AddName(str);
         serv.MakeSplitVec();
     }
-    }while(present.Continue());
+    }while(present.Continue());*/
     return 0;
 }
 
