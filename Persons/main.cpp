@@ -12,12 +12,13 @@ int main()
 {
     QSqlDatabase db;
     db = QSqlDatabase::addDatabase("QSQLITE");
-    QString dbName = "database.sqlite";
+    QString dbName = "Persons_db.sqlite";
     db.setDatabaseName(dbName);
 
     db.open();
 
     QSqlQuery query(db);
+
 /*
     string str;
 
