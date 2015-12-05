@@ -11,7 +11,7 @@ void Data::readFile(){
     cin >> c;
     QSqlDatabase db;
     db = QSqlDatabase::addDatabase("QSQLITE");
-    QString dbName = "datbase.sqlite";
+    QString dbName = "database.sqlite";
     db.setDatabaseName(dbName);
 
     db.open();
