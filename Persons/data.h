@@ -13,6 +13,7 @@
 #include <QString>
 
 using namespace std;
+class Persons;
 
 class Data{
 public:
@@ -22,6 +23,7 @@ public:
     void copyVector(vector<string> &vect);
 protected:
     vector<string> data;
+    vector<Persons*> scientist;
 };
 
 #endif // DATA_H

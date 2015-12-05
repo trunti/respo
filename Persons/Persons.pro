@@ -8,10 +8,12 @@ CONFIG -= app_bundle
 SOURCES += main.cpp \
     data.cpp \
     service.cpp \
-    presentation.cpp
+    presentation.cpp \
+    persons.cpp
 
 HEADERS += \
     data.h \
     service.h \
-    presentation.h
+    presentation.h \
+    persons.h
 
