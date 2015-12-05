@@ -6,7 +6,9 @@ Data::Data()
 
 }
 void Data::readFile(){
-
+    int c;
+    cout << "enter c: ";
+    cin >> c;
     QSqlDatabase db;
     db = QSqlDatabase::addDatabase("QSQLITE");
     QString dbName = "Persons_db.sqlite";
@@ -27,12 +29,20 @@ void Data::readFile(){
         qWarning() << country;
       }
     }
-    query.prepare("SELECT * FROM Persons_db");
-    query.bindValue("Name", QString::fromStdString("*"));
-    query.bindValue("Gender", QString::fromStdString("*"));
-    query.bindValue("Born", QString::fromStdString("*"));
-    query.bindValue("Died", QString::fromStdString("*"));
-    query.exec();
+    if(c == 1)
+            query.prepare("SELECT * FROM Persons_db ORDER BY Name");
+
+        else if(c == 2)
+            query.prepare("SELECT * FROM Persons_db ORDER BY BORN");
+
+        else
+            query.prepare("SELECT * FROM Persons_db");
+
+        query.bindValue("Name", QString::fromStdString("*"));
+        query.bindValue("Gender", QString::fromStdString("*"));
+        query.bindValue("Born", QString::fromStdString("*"));
+        query.bindValue("Died", QString::fromStdString("*"));
+        query.exec();
 
     while(query.next())
     {
