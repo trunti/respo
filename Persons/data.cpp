@@ -11,7 +11,7 @@ void Data::readFile(){
     cin >> c;
     QSqlDatabase db;
     db = QSqlDatabase::addDatabase("QSQLITE");
-    QString dbName = "Persons_db.sqlite";
+    QString dbName = "datbase.sqlite";
     db.setDatabaseName(dbName);
 
     db.open();
@@ -30,13 +30,13 @@ void Data::readFile(){
       }
     }
     if(c == 1)
-            query.prepare("SELECT * FROM Persons_db ORDER BY Name");
+            query.prepare("SELECT * FROM Persons ORDER BY Name");
 
         else if(c == 2)
-            query.prepare("SELECT * FROM Persons_db ORDER BY BORN");
+            query.prepare("SELECT * FROM Persons ORDER BY BORN");
 
         else
-            query.prepare("SELECT * FROM Persons_db");
+            query.prepare("SELECT * FROM Persons");
 
         query.bindValue("Name", QString::fromStdString("*"));
         query.bindValue("Gender", QString::fromStdString("*"));
