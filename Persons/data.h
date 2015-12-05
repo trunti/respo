@@ -22,8 +22,12 @@ public:
     void writeFile(string str);
     void copyVector(vector<string> &vect);
 protected:
-    vector<string> data;
     vector<Persons*> scientist;
+private:
+    string born;
+    string died;
+    string gender;
+    string name;
 };
 
 #endif // DATA_H
