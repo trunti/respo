@@ -22,10 +22,9 @@ void Data::readFile(){
 
     while(query.next())
     {
-        Persons.name = query.value("Name").toString().toStdString();
-        Persons.gender = query.value("Gender").toString().toStdString();
-        Persons.born = query.value("Born").toUInt();
-        Persons.died = query.value("Died").toUInt();
+        name = query.value("Name").toString().toStdString();
+        gender = query.value("Gender").toString().toStdString();
+        born = query.value("Born").toUInt();
+        died = query.value("Died").toUInt();
     }
 }
-

@@ -24,8 +24,8 @@ public:
 protected:
     vector<Persons*> scientist;
 private:
-    string born;
-    string died;
+    int born;
+    int died;
     string gender;
     string name;
 };
