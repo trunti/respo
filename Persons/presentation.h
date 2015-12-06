@@ -6,19 +6,18 @@
 #include <cstdlib>
 #include <ctime>
 
-using namespace std;
+// UI klasinn sér um samskipti við notenda og sækir upplýsingar í Domain klasann.
 
-class Presentation : Service
+class Presentation
 {
 public:
     Presentation();
-    void Redirect(int number, Service serv, string &input);
-    string GetInfo(string &str);
-    int Choice();
-    bool Continue();
-    int HowToSort();
-    void Sorting(Service serv, const int choose);
-    void SortSex(Service serv);
+    void mainMenu();            // Aðalvalmynd - Býður notenda uppá að velja aðgerðir
+private:
+    void cleanScreen();         // Hreinsar allt sem er á skjánum
+    void listScientists();      // Valmynd - Býður uppá mismunandi valmöguleika til að sýna vísindamenn í gagnagrunniþ
+    void listComputers();       // Valmynd - Býður uppá mismunandi valmöguleika til að sýna tölvur í gagnagrunni.
+    void relationship();        // Sýnir tengsl á milli tölvu og vísindamanna.
 };
 
 #endif // PRESENTATION_H
