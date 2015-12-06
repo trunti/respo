@@ -10,9 +10,11 @@ public:
     void mainMenu();            // Aðalvalmynd - Býður notenda uppá að velja aðgerðir
 private:
     void cleanScreen();         // Hreinsar allt sem er á skjánum
-    void listScientists();      // Valmynd - Býður uppá mismunandi valmöguleika til að sýna vísindamenn í gagnagrunniþ
+    void listScientists();      // Valmynd - Býður uppá mismunandi valmöguleika til að sýna vísindamenn í gagnagrunni.
     void listComputers();       // Valmynd - Býður uppá mismunandi valmöguleika til að sýna tölvur í gagnagrunni.
-    void relationship();        // Sýnir tengsl á milli tölvu og vísindamanna.
+    void listRelationship();    // Valmynd -  Býður upp á mismunandi valmöguleika til að skoða tengsl milli vísindamanna og tölva
+
+
 };
 
 

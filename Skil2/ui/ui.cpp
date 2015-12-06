@@ -53,7 +53,7 @@ void UI::mainMenu()
             cleanScreen();
             cout << "#### RELATIONSHIP BTWEEN COMPUTERS AND SCIENTISTS ####" << endl << endl;
             flag = false;
-            relationship();
+            listRelationship();
             break;
         case '4':
             cleanScreen();
@@ -213,10 +213,18 @@ void UI::listComputers()
     }
 }
 
-void UI::relationship()
+void UI::listRelationship()
 {
     char selection;
-    cout << "Enter computer's ID to see the scientist behinde the machine: ";
+
+    cout << "How should the list be sorted: " << endl << endl;
+
+    cout << "1: Select computer to see the scientist behinde the machine." << endl;
+    cout << "2: Select scientist to see his machines." << endl;
+    cout << "3: Display full list." << endl;
+    cout << "4: Display list of ." << endl;
+    cout << "5: Display full list." << endl;
+
 
     cout << endl << "You can press 'M' for MAIN or 'Q' to QUIT." << endl;
 
@@ -236,47 +244,8 @@ void UI::relationship()
         break;
     default:
         cleanScreen();
-        //findRelationship(selection);
+       // Domain::findRelationship(char selection);
         break;
     }
 }
-/*
-void findRelationship(int computer_id)
-{
-    int id = computer_id;
-
-    // Setja inn kóða sem athugar hvot id sé til, ef svo er birtir það venslin.
-    else
-    {
-        char selection;
-
-        cout << "Not valid ID number!" << endl;
-        cout << endl << "Do you want to try again? (Y/N): ";
-
-        cout << "Selection: ";
-        cin >> selection;
-
-        switch (selection)
-        {
-        case 'Y':
-        case 'y':
-            cleanScreen();
-            cout << "#### RELATIONSHIP BTWEEN COMPUTERS AND SCIENTISTS ####" << endl << endl;
-            relationship();
-            break;
-        case 'N':
-        case 'n':
-        cleanScreen();
-        mainMenu();
-        break;
-        default:
-            cleanScreen();
-            cout << "Error: Invalid choice, try again!" << endl << endl;
-            listComputers();
-            break;
-        }
-
-    }
-}
-*/
 
