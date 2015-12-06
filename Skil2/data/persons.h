@@ -1,6 +1,8 @@
 #ifndef PERSONS_H
 #define PERSONS_H
 
+// Klasi af einstaklingum í gagnagrunni
+
 #include <iostream>
 using namespace std;
 
